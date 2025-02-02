@@ -6,9 +6,9 @@ public class Main {
 }
 
 class Assembler {
-    int rows = 40, cols = 80;
-    int TreeX = 35, TreeY = 25;
-    private String[][] grid = new String[rows][cols];       //encapsulation
+    private  int  rows = 40, cols = 80,   TreeX = 35, TreeY = 25;
+    private String[][] grid = new String[rows][cols];    
+ //encapsulation
 
     void Frame() {
 
@@ -47,10 +47,10 @@ class Assembler {
     }
 }
 
-class Assets extends Assembler{  //Inheritance and Abstraction
+ class Assets  {
 
 
-     static void drawBranchTopA(String[][] grid, int treeX, int treeY) {
+       static void drawBranchTopA(String[][] grid, int treeX, int treeY) {
         for (int j = treeX - 21; j <= treeX + 21; j++) {
             if (j == treeX - 10) {
                 grid[treeY + 10][j] = "\\";
@@ -248,7 +248,7 @@ class Assets extends Assembler{  //Inheritance and Abstraction
                 grid[treeY + 10][j] = "/";
             } else if (j == treeX + 5) {
                 grid[treeY + 10][j] = "/";
-            } 
+            }
         }
     }
 
