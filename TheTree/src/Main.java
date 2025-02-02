@@ -248,14 +248,12 @@ class Assets extends Assembler{  //Inheritance and Abstraction
                 grid[treeY + 10][j] = "/";
             } else if (j == treeX + 5) {
                 grid[treeY + 10][j] = "/";
-            } else {
-                grid[treeY + 10][j] = " ";
-            }
+            } 
         }
     }
 
     static void drawTopTrunk(String[][] grid, int treeX, int treeY) {
-        for (int j = treeX - 14; j <= treeX + 15; j++) {
+        for (int j = treeX - 4; j <= treeX + 15; j++) {
             if (j == treeX - 1) {
                 grid[treeY + 10][j] = "\\";
             } else if (j == treeX + 2) {
@@ -264,30 +262,35 @@ class Assets extends Assembler{  //Inheritance and Abstraction
                 grid[treeY + 10][j] = "/";
             } else if (j == treeX + 4) {
                 grid[treeY + 10][j] = "/";
-            } else {
-                grid[treeY + 10][j] = " ";
             }
         }
     }
-
     static void drawCoreTrunk(String[][] grid, int treeX, int treeY) {
         for (int i = treeY; i < treeY + 10; i++) {
             for (int j = treeX; j < treeX + 7; j++) {
                 if (j == treeX || j == treeX + 6) {
+                    grid[i][j] = "|";
+                } else if (j == treeX + 1 || j == treeX + 5) {
+                    grid[i][j] = (i == 0) ? "/" : "\\";
+                } else if (j == treeX + 2 || j == treeX + 4) {
+                    grid[i][j] = (i == 0) ? "\\" : "/";
+                } else {
                     grid[i][j] = "|";
                 }
             }
         }
     }
 
+
+
     static void drawGroundTrunk(String[][] grid, int treeX, int treeY) {
-        for (int j = treeX - 10; j <= treeX + 7; j++) {
+        for (int j = treeX - 1; j <= treeX + 7; j++) {
             if (j == treeX - 1) {
                 grid[treeY + 10][j] = "/";
             } else if (j == treeX + 7) {
                 grid[treeY + 10][j] = "\\";
             } else {
-                grid[treeY + 10][j] = " ";
+                grid[treeY + 10][j] = "|";
             }
         }
     }
