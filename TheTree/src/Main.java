@@ -7,7 +7,7 @@ public class Main {
 
 class Assembler {
     int rows = 40, cols = 80;
-    int TreeX = 35, TreeY = 16;
+    int TreeX = 35, TreeY = 25;
     private String[][] grid = new String[rows][cols];       //encapsulation
 
     void Frame() {
@@ -293,7 +293,7 @@ class Assets extends Assembler{  //Inheritance and Abstraction
     }
 
     static void drawGround(String[][] grid, int rows, int cols) {
-        int groundRow = rows - 13;
+        int groundRow = rows - 4;
         for (int i = 10; i < cols - 10; i++) {
             grid[groundRow][i] = "-";
         }
