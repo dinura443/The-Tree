@@ -9,6 +9,7 @@ Java program that generates an ASCII tree structure in the console. The tree con
 
 
 ![TreeDemo](https://github.com/user-attachments/assets/bc7ce8eb-a17f-47d5-a8c0-aaa7ac9f2425)
+
 Uses |, /, and \ characters.
 
 Structured with Main, Assembler, and Assets classes 
