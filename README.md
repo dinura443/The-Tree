@@ -6,14 +6,12 @@
 
 Java program that generates an ASCII tree structure in the console. The tree consists of a trunk and branches
 
-Features
 
-Generates an ASCII tree with customizable trunk and branches
 
 ![TreeDemo](https://github.com/user-attachments/assets/bc7ce8eb-a17f-47d5-a8c0-aaa7ac9f2425)
-Uses |, /, and \ characters to create a realistic trunk
+Uses |, /, and \ characters.
 
-Structured with Main, Assembler, and Assets classes for modularity
+Structured with Main, Assembler, and Assets classes 
 
 How It Works,
 
