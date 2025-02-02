@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Assembler Assemble = new Assembler();
-        Assemble.Frame();
+        TreeAssembler TreeAssembler1 = new TreeAssembler();
+        TreeAssembler1.Frame();
     }
 }
 
-class Assembler {
+class TreeAssembler {
     private  int  rows = 40, cols = 80,   TreeX = 35, TreeY = 25;
-    private String[][] grid = new String[rows][cols];    
+    private String[][] grid = new String[rows][cols];
  //encapsulation
 
     void Frame() {
@@ -24,18 +24,18 @@ class Assembler {
             }
         }
 
-        Assets.drawCoreTrunk(grid, TreeX, TreeY);
-        Assets.drawGroundTrunk(grid, TreeX, TreeY);
-        Assets.drawGround(grid, rows, cols);
-        Assets.drawTopTrunk(grid, TreeX, TreeY - 10);
-        Assets.drawBranchBottomC(grid, TreeX, TreeY - 11);
-        Assets.drawBranchBottomB(grid, TreeX, TreeY - 12);
-        Assets.drawBranchBottomA(grid, TreeX, TreeY - 13);
-        Assets.drawBranchMiddleC(grid, TreeX, TreeY - 14);
-        Assets.drawBranchMiddleB(grid, TreeX, TreeY - 15);
-        Assets.drawBranchMiddleA(grid, TreeX, TreeY - 16);
-        Assets.drawBranchTopB(grid, TreeX, TreeY - 17);
-        Assets.drawBranchTopA(grid, TreeX, TreeY - 18);
+        TreeParts.drawCoreTrunk(grid, TreeX, TreeY);
+        TreeParts.drawGroundTrunk(grid, TreeX, TreeY);
+        TreeParts.drawGround(grid, rows, cols);
+        TreeParts.drawTopTrunk(grid, TreeX, TreeY - 10);
+        TreeParts.drawBranchBottomC(grid, TreeX, TreeY - 11);
+        TreeParts.drawBranchBottomB(grid, TreeX, TreeY - 12);
+        TreeParts.drawBranchBottomA(grid, TreeX, TreeY - 13);
+        TreeParts.drawBranchMiddleC(grid, TreeX, TreeY - 14);
+        TreeParts.drawBranchMiddleB(grid, TreeX, TreeY - 15);
+        TreeParts.drawBranchMiddleA(grid, TreeX, TreeY - 16);
+        TreeParts.drawBranchTopB(grid, TreeX, TreeY - 17);
+        TreeParts.drawBranchTopA(grid, TreeX, TreeY - 18);
 
 
         for (int i = 0; i < rows; i++) {
@@ -47,7 +47,7 @@ class Assembler {
     }
 }
 
- class Assets  {
+ class TreeParts  {
 
 
        static void drawBranchTopA(String[][] grid, int treeX, int treeY) {
@@ -156,6 +156,7 @@ class Assembler {
         }
 
     }
+    
 
     static void drawBranchMiddleB(String[][] grid, int treeX, int treeY) {
         for (int j = treeX - 15; j <= treeX + 15; j++) {
